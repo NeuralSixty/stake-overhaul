@@ -1,0 +1,19 @@
+{
+  "id": "stake_overhaul",
+  "name": "Stake Overhaul",
+  "display_name": "Stake Overhaul",
+  "author": [
+    "NeuralSixty",
+    "Phylanth"
+  ],
+  "description": "Fundamentally overhauls the stake difficulty system.",
+  "prefix": "sovhl",
+  "main_file": "main.lua",
+  "priority": 0,
+  "badge_colour": "AC3232",
+  "badge_text_colour": "FFFFFF",
+  "version": "1.0.0",
+  "dependencies": [
+    "Steamodded (>=1.0.0~BETA-1016c)"
+  ]
+}
