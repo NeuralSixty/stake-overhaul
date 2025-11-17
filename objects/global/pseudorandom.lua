@@ -26,16 +26,18 @@ function SOVHL.pseudorandom_probability(trigger_obj, seed, base_numerator, base_
 
   local key;
 
-  if SMODS.has_enhancement(trigger_obj, 'm_glass') or (trigger_obj.ability and trigger_obj.ability.set and (trigger_obj.ability.set == 'Joker' or trigger_obj.ability.set == 'Tarot')) then
-    key = trigger_obj.config.center_key
+  if trigger_obj.ability and trigger_obj.ability.set then
+    if trigger_obj.ability.set == 'Joker' or trigger_obj.ability.set == 'Tarot' or SMODS.has_enhancement(trigger_obj, 'm_glass') then
+      key = trigger_obj.config.center_key
+    elseif SMODS.has_enhancement(trigger_obj, 'm_lucky') then
+      if seed == 'sovhl_lucky_mult' then
+        key = trigger_obj.config.center_key .. '_mult'
+      elseif seed == 'sovhl_lucky_money' then
+        key = trigger_obj.config.center_key .. '_dollars'
+      end
+    end
   elseif trigger_obj.config and trigger_obj.config.blind then
     key = trigger_obj.config.blind.key
-  elseif SMODS.has_enhancement(trigger_obj, 'm_lucky') then
-    if seed == 'sovhl_lucky_mult' then
-      key = trigger_obj.config.center_key .. '_mult'
-    elseif seed == 'sovhl_lucky_money' then
-      key = trigger_obj.config.center_key .. '_dollars'
-    end
   end
 
   SOVHL.init_prob_game_state(key)
