@@ -1662,7 +1662,7 @@ SMODS.Joker:take_ownership('faceless', {
         G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) +
             (card.ability.extra.dollars * card.ability.extra.current_factor)
         return {
-          dollars = card.ability.extra.dollars,
+          dollars = card.ability.extra.dollars * card.ability.extra.current_factor,
           func = function()
             G.E_MANAGER:add_event(Event({
               func = function()
@@ -1782,7 +1782,7 @@ SMODS.Joker:take_ownership('todo_list', {
       G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) +
           (card.ability.extra.dollars * card.ability.extra.current_factor)
       return {
-        dollars = card.ability.extra.dollars,
+        dollars = card.ability.extra.dollars * card.ability.extra.current_factor,
         func = function()
           G.E_MANAGER:add_event(Event({
             func = function()
@@ -3784,7 +3784,7 @@ SMODS.Joker:take_ownership('rough_gem', {
       G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) +
           (card.ability.extra.dollars * card.ability.extra.current_factor)
       return {
-        dollars = card.ability.extra.dollars,
+        dollars = card.ability.extra.dollars * card.ability.extra.current_factor,
         func = function()
           G.E_MANAGER:add_event(Event({
             func = function()
@@ -4372,7 +4372,7 @@ SMODS.Joker:take_ownership('matador', {
         G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) +
             (card.ability.extra.dollars * card.ability.extra.current_factor)
         return {
-          dollars = card.ability.extra.dollars,
+          dollars = card.ability.extra.dollars * card.ability.extra.current_factor,
           func = function()
             G.E_MANAGER:add_event(Event({
               func = function()
