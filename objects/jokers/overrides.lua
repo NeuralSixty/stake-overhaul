@@ -625,7 +625,7 @@ SMODS.Joker:take_ownership('8_ball', {
     local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'sovhl_8ball')
     local prophet_joker = next(SMODS.find_card('j_sovhl_prophet', false))
 
-    if prophet_joker then
+    if prophet_joker and card.config and card.config.center_key then
       SOVHL.init_prob_game_state(card.config.center_key)
 
       return {
@@ -1014,7 +1014,7 @@ SMODS.Joker:take_ownership('gros_michel', {
     local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'sovhl_gros_michel')
     local prophet_joker = next(SMODS.find_card('j_sovhl_prophet', false))
 
-    if prophet_joker then
+    if prophet_joker and card.config and card.config.center_key then
       SOVHL.init_prob_game_state(card.config.center_key)
 
       return {
@@ -1143,7 +1143,7 @@ SMODS.Joker:take_ownership('business', {
     local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'sovhl_business')
     local prophet_joker = next(SMODS.find_card('j_sovhl_prophet', false))
 
-    if prophet_joker then
+    if prophet_joker and card.config and card.config.center_key then
       SOVHL.init_prob_game_state(card.config.center_key)
 
       return {
@@ -1265,7 +1265,7 @@ SMODS.Joker:take_ownership('space', {
     local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'sovhl_space')
     local prophet_joker = next(SMODS.find_card('j_sovhl_prophet', false))
 
-    if prophet_joker then
+    if prophet_joker and card.config and card.config.center_key then
       SOVHL.init_prob_game_state(card.config.center_key)
 
       return {
@@ -1829,7 +1829,7 @@ SMODS.Joker:take_ownership('cavendish', {
     local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'sovhl_cavendish')
     local prophet_joker = next(SMODS.find_card('j_sovhl_prophet', false))
 
-    if prophet_joker then
+    if prophet_joker and card.config and card.config.center_key then
       SOVHL.init_prob_game_state(card.config.center_key)
 
       return {
@@ -2558,7 +2558,7 @@ SMODS.Joker:take_ownership('reserved_parking', {
       'sovhl_reserved_parking')
     local prophet_joker = next(SMODS.find_card('j_sovhl_prophet', false))
 
-    if prophet_joker then
+    if prophet_joker and card.config and card.config.center_key then
       SOVHL.init_prob_game_state(card.config.center_key)
 
       return {
@@ -2696,7 +2696,7 @@ SMODS.Joker:take_ownership('hallucination', {
       'sovhl_hallucination' .. G.GAME.round_resets.ante)
     local prophet_joker = next(SMODS.find_card('j_sovhl_prophet', false))
 
-    if prophet_joker then
+    if prophet_joker and card.config and card.config.center_key then
       SOVHL.init_prob_game_state(card.config.center_key)
 
       return {
@@ -3825,7 +3825,7 @@ SMODS.Joker:take_ownership('bloodstone', {
     local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'sovhl_bloodstone')
     local prophet_joker = next(SMODS.find_card('j_sovhl_prophet', false))
 
-    if prophet_joker then
+    if prophet_joker and card.config and card.config.center_key then
       SOVHL.init_prob_game_state(card.config.center_key)
 
       return {

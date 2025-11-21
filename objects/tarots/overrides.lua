@@ -5,7 +5,7 @@ SMODS.Consumable:take_ownership('wheel_of_fortune', {
       'sovhl_wheel_of_fortune')
     local prophet_joker = next(SMODS.find_card('j_sovhl_prophet', false))
 
-    if prophet_joker then
+    if prophet_joker and card.config and card.config.center_key then
       SOVHL.init_prob_game_state(card.config.center_key)
 
       return {
