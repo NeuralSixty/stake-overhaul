@@ -4625,6 +4625,7 @@ SMODS.Joker:take_ownership('invisible', {
         if joker.edition and joker.edition.negative then
           main_end = {}
           localize { type = 'other', key = 'remove_negative', nodes = main_end, vars = {} }
+          main_end = main_end[1]
           break
         end
       end

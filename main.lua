@@ -33,3 +33,5 @@ assert(SMODS.load_file("objects/jokers/overrides.lua"))()
 assert(SMODS.load_file("objects/jokers/prophet.lua"))()
 
 assert(SMODS.load_file("objects/tarots/overrides.lua"))()
+
+assert(SMODS.load_file("objects/spectrals/overrides.lua"))()

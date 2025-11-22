@@ -800,6 +800,12 @@ return {
           "{C:attention}Stake{} difficulty",
         },
       },
+      remove_negative = {
+        name= "n",
+        text = {
+          "{C:inactive,s:0.9}(Tries to remove {C:dark_edition,s:0.9}Negative{C:inactive,s:0.9} from copy)",
+        },
+      },
     },
   },
   misc = {
