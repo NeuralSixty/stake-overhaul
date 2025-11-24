@@ -4652,9 +4652,9 @@ SMODS.Joker:take_ownership('invisible', {
       if #jokers > 0 then
         for i = 1, card.ability.extra.current_factor do
           if #G.jokers.cards <= G.jokers.config.card_limit then
-            local chosen_joker = pseudorandom_element(jokers, 'sovhl_invisible')
+            local chosen_joker = pseudorandom_element(jokers, 'sovhl_invisible_' .. i)
             local copied_joker = copy_card(chosen_joker, nil, nil, nil,
-              chosen_joker.edition and chosen_joker.edition.negative)
+              chosen_joker and chosen_joker.edition and chosen_joker.edition.negative and not (chosen_joker.ability and chosen_joker.ability.eternal and chosen_joker.ability.perishable))
             copied_joker:add_to_deck()
             G.jokers:emplace(copied_joker)
           else
